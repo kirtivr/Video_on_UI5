@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video on UI5</title>
+    
+    <!-- Load UI5 libs -->
+    <script  src= "https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+             id= "sap-ui-bootstrap" data-sap-ui-libs="sap.ui.commons" 
+             data-sap-ui-theme="sap_bluecrystal">
+    </script>
+
+    <!-- Initialize Video custom control -->
+    <script>
+    	sap.ui.localResources('custom');
+        jQuery.sap.require('custom.SVideo');
+        var video = new sap.ui.custom.SVideo({
+        										width:"450px",
+        										height:"360px",
+        										src:"Ghost_leaving_classroom_CCTV.mp4",
+        										type:"video/mp4",
+        										poster:"dummy_female.jpg",
+        										muted:false,autoplay:true
+        									});
+        
+        video.placeAt("dump_spot");
+
+    </script>
+
+</head>
+
+<body >
+
+<div id = "dump_spot">
+</div>
+
+</body>
+
+</html>
